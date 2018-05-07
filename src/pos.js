@@ -1,9 +1,9 @@
 class POS {
-  constructor(tax = 0.20, phone_value = 99.99) {
+  constructor(tax = 0.20, phoneValue = 99.99, budget = 150) {
     this.tax = tax;
-    this.phone_value = phone_value;
+    this.phoneValue = phoneValue;
+    this.budget = budget;
   }
-
 }
 
 module.exports = POS;
