@@ -24,6 +24,14 @@ describe('#POS', function () {
     it('Has budget above phone value', function () {
       expect(this.pos.budget).to.be.above(this.pos.phoneValue);
     });
+
+    describe('#buyPhone', function () {
+      it('reduces budget by phoneValue', function () {
+        expect(this.pos.budget).to.eq(150);
+        this.pos.buyPhone();
+        expect(this.pos.budget).to.eq(50.01);
+      });
+    });
   });
 
 });
