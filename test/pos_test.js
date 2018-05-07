@@ -32,6 +32,15 @@ describe('#POS', function () {
         expect(this.pos.budget).to.eq(50.01);
       });
     });
+
+    describe('#buyAccessory', function () {
+      it('reduces budget by accessoryValue', function () {
+        expect(this.pos.budget).to.eq(150);
+        this.pos.buyAccessory();
+        expect(this.pos.budget).to.eq(125);
+      });
+    });
+
   });
 
 });
