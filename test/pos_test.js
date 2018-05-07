@@ -17,6 +17,10 @@ describe('#POS', function () {
       expect(this.pos.phoneValue).to.eq(99.99);
     });
 
+    it('Has default phone accessory value of 25', function () {
+      expect(this.pos.accessoryValue).to.eq(25);
+    });
+
     it('Has budget above phone value', function () {
       expect(this.pos.budget).to.be.above(this.pos.phoneValue);
     });
