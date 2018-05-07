@@ -3,15 +3,19 @@ const expect = chai.expect;
 const POS = require('../src/pos');
 
 describe('#POS', function () {
+  let pos;
+  beforeEach(function () {
+    this.pos = new POS();
+  });
+
   describe('Initialization values', function () {
     it('Has default tax of twenty percent', function () {
-      let pos = new POS();
-      expect(pos.tax).to.eq(0.20);
+      expect(this.pos.tax).to.eq(0.20);
     });
 
     it('Has default phone value of 99.99', function () {
-      let pos = new POS();
-      expect(pos.phone_value).to.eq(99.99);
+      expect(this.pos.phoneValue).to.eq(99.99);
+    });
     });
   });
 });
