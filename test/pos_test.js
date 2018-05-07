@@ -8,5 +8,10 @@ describe('#POS', function () {
       let pos = new POS();
       expect(pos.tax).to.eq(0.20);
     });
+
+    it('Has default phone value of 99.99', function () {
+      let pos = new POS();
+      expect(pos.phone_value).to.eq(99.99);
+    });
   });
 });
