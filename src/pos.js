@@ -5,6 +5,10 @@ class POS {
     this.accessoryValue = accessoryValue;
     this.budget = budget;
   }
+
+  buyPhone() {
+    this.budget = Number((this.budget - this.phoneValue).toFixed(2));
+  }
 }
 
 module.exports = POS;
